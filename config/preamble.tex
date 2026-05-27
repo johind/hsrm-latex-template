@@ -1,0 +1,87 @@
+% ---------------------------------------------------------------------------
+% Packages
+% ---------------------------------------------------------------------------
+% This template targets pdfLaTeX because it is widely available on Overleaf,
+% TeX Live, and MiKTeX. If you switch to LuaLaTeX or XeLaTeX, remove inputenc.
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{csquotes}
+
+\usepackage[a4paper,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm,headheight=14pt]{geometry}
+\usepackage{setspace}
+\usepackage{microtype}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage{listings}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{acronym}
+\usepackage{fancyhdr}
+\usepackage[nottoc]{tocbibind}
+\usepackage[
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue,
+  pdfusetitle
+]{hyperref}
+\usepackage{bookmark}
+
+% ---------------------------------------------------------------------------
+% PDF metadata
+% ---------------------------------------------------------------------------
+\hypersetup{
+  pdftitle={\thesistitle},
+  pdfauthor={\thesisauthor},
+  pdfsubject={\thesistype},
+  pdfkeywords={\pdfkeywords}
+}
+
+% ---------------------------------------------------------------------------
+% Layout
+% ---------------------------------------------------------------------------
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.0ex}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---------------------------------------------------------------------------
+% Source-code listings
+% ---------------------------------------------------------------------------
+% Use \begin{lstlisting}[language=Python,caption={...},label={lst:example}] for
+% code examples. Add language-specific styles here if your thesis needs them.
+\lstdefinestyle{thesislisting}{
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue!70!black},
+  commentstyle=\color{gray}\itshape,
+  stringstyle=\color{green!40!black},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=8pt,
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2,
+  captionpos=b,
+  showstringspaces=false
+}
+\lstset{style=thesislisting}
+
+% ---------------------------------------------------------------------------
+% Helper commands
+% ---------------------------------------------------------------------------
+\newcommand{\placeholder}[1]{\textcolor{red!70!black}{#1}}

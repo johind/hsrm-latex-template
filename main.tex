@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+% Central template settings. Edit metadata.tex first, then adjust preamble.tex
+% only if your thesis needs different packages or layout rules.
+\input{config/metadata}
+\input{config/preamble}
+
+\begin{document}
+
+% The cover page is not numbered. Front matter starts at Roman page I.
+\pagenumbering{gobble}
+\input{sections/deckblatt}
+
+\cleardoublepage
+\pagenumbering{Roman}
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents
+
+\cleardoublepage
+\listoffigures
+
+% Keep this list only if the thesis contains source-code listings.
+\cleardoublepage
+\lstlistoflistings
+
+\cleardoublepage
+\input{sections/abkuerzungen}
+
+% Main chapters use Arabic page numbers.
+\cleardoublepage
+\pagenumbering{arabic}
+
+\chapter{Einleitung}
+\input{sections/einleitung}
+
+\chapter{Theoretische Grundlagen}
+\input{sections/grundlagen}
+
+\chapter{Konzeption}
+\input{sections/konzeption}
+
+\chapter{Implementierung}
+\input{sections/implementierung}
+
+\chapter{Fazit und Ausblick}
+\input{sections/fazit}
+
+\appendix
+\chapter{Anhang}
+\input{sections/anhang}
+
+\cleardoublepage
+\bibliographystyle{alpha}
+\bibliography{references}
+
+\cleardoublepage
+\input{sections/eigenstaendigkeitserklaerung}
+
+\end{document}
