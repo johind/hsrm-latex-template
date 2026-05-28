@@ -4,6 +4,16 @@ This repository is a starter template for bachelor and project theses at
 Hochschule RheinMain. It is intentionally small: edit the metadata, write your
 chapters, add sources, and build `main.pdf`.
 
+## Preview
+
+<p>
+  <img src="docs/preview-cover.png" alt="Cover page preview" width="420">
+  <img src="docs/preview-toc.png" alt="Table of contents preview" width="420">
+</p>
+
+The `docs/` folder is only used for repository presentation assets such as this
+preview images. You can safely delete it when starting your own thesis.
+
 ## Quick Start
 
 1. Edit `config/metadata.tex`.
@@ -28,6 +38,7 @@ latexmk -c
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
 - `sections/`: chapter files and front/back matter.
 - `images/`: logo and image assets used by the thesis.
+- `docs/`: optional preview assets for the GitHub repository.
 - `references.bib`: BibTeX bibliography database.
 
 ## Common Tasks
@@ -66,6 +77,8 @@ Use `\ac{API}` in the text.
 ## Before Submission
 
 Check the current requirements from your programme, examination regulations, and
-supervisor. In particular, verify title-page wording, declaration wording,
+supervisor. In particular, verify title-page wording, required declarations,
 margin requirements, citation style, digital submission rules, and whether a
-printed copy is required.
+printed copy is required. This template intentionally does not include a
+declaration of independent work; add the official wording required by your
+programme or examination office.
