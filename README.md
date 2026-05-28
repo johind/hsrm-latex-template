@@ -6,10 +6,12 @@ chapters, add sources, and build `main.pdf`.
 
 ## Preview
 
-<p>
-  <img src="docs/preview-cover.png" alt="Cover page preview" width="420">
-  <img src="docs/preview-toc.png" alt="Table of contents preview" width="420">
-</p>
+<div class="grid cards" markdown>
+
+![Cover page preview](docs/preview-cover.png)
+![Table of contents preview](docs/preview-toc.png)
+
+</div>
 
 The `docs/` folder is only used for repository presentation assets such as this
 preview images. You can safely delete it when starting your own thesis.
