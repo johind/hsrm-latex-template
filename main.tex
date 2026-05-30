@@ -9,7 +9,7 @@
 
 % The cover page is not numbered. Front matter starts at Roman page I.
 \pagenumbering{gobble}
-\input{sections/deckblatt}
+\input{sections/cover}
 
 \cleardoublepage
 \pagenumbering{Roman}
@@ -26,30 +26,30 @@
 \lstlistoflistings
 
 \cleardoublepage
-\input{sections/abkuerzungen}
+\input{sections/acronyms}
 
 % Main chapters use Arabic page numbers.
 \cleardoublepage
 \pagenumbering{arabic}
 
 \chapter{Einleitung}
-\input{sections/einleitung}
+\input{sections/introduction}
 
 \chapter{Theoretische Grundlagen}
-\input{sections/grundlagen}
+\input{sections/background}
 
 \chapter{Konzeption}
-\input{sections/konzeption}
+\input{sections/concept}
 
 \chapter{Implementierung}
-\input{sections/implementierung}
+\input{sections/implementation}
 
 \chapter{Fazit und Ausblick}
-\input{sections/fazit}
+\input{sections/conclusion}
 
 \appendix
 \chapter{Anhang}
-\input{sections/anhang}
+\input{sections/appendix}
 
 \cleardoublepage
 \bibliographystyle{alpha}
