@@ -16,15 +16,17 @@
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents
 
+% Delete this block if the thesis has no figures.
 \cleardoublepage
 \listoffigures
 
-% Keep this list only if the thesis contains source-code listings.
+% Delete this block if the thesis has no source-code listings.
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
 \lstlistoflistings
 
+% Delete this block if the thesis has no acronyms.
 \cleardoublepage
 \input{sections/acronyms}
 
@@ -47,6 +49,7 @@
 \chapter{Fazit und Ausblick}
 \input{sections/conclusion}
 
+% Delete this appendix block if the thesis has no appendix.
 \appendix
 \chapter{Anhang}
 \input{sections/appendix}
