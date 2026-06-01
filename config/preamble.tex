@@ -26,6 +26,7 @@
 \usepackage{subcaption}
 \usepackage[nohyperlinks]{acronym}
 \usepackage{fancyhdr}
+\usepackage{titlesec}
 \usepackage[nottoc]{tocbibind}
 \usepackage[
   colorlinks=true,
@@ -58,6 +59,18 @@
 \fancyhead[L]{\small\nouppercase{\leftmark}}
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}
+  {\thechapter}
+  {1em}
+  {}
+\titleformat{name=\chapter,numberless}[hang]
+  {\normalfont\huge\bfseries}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\chapter}{0pt}{0pt}{2.5em}
 
 % ---------------------------------------------------------------------------
 % Source-code listings

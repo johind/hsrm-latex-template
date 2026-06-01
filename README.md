@@ -37,7 +37,7 @@ latexmk -c
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
 - `sections/`: English-named files for the cover page, front matter, chapters,
   and appendix.
-- `images/`: logo and image assets used by the thesis.
+- `images/`: placeholder logo and image assets used by the thesis.
 - `docs/`: optional preview assets for the GitHub repository.
 - `references.bib`: BibTeX bibliography database.
 
@@ -86,17 +86,11 @@ supervisor. In particular:
   and whether a printed copy is required.
 - Add the official declaration of independent work required by your programme or
   examination office. This template intentionally does not include one.
+- Replace `images/logo.png` with a logo or placeholder image you are allowed to
+  use.
 - Update the preview images in `docs/` if you publish a changed version of the
   template.
 
-## License and Logo Notice
+## License
 
-This template is licensed under the MIT License, except for third-party brand
-assets.
-
-The Hochschule RheinMain logos in `images/` are brand assets of Hochschule
-RheinMain. They are included only to make this unofficial thesis template usable
-for HSRM documents. They are not covered by this repository's MIT License, and
-their inclusion does not imply endorsement by or affiliation with Hochschule
-RheinMain. Check the university's current corporate design and logo usage rules
-before redistributing or publishing modified versions.
+This template is licensed under the MIT License.
