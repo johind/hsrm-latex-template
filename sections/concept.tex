@@ -1,39 +1,44 @@
-% Explain the design before implementation details appear: requirements,
-% architecture, data models, workflows, and important decisions.
+% Replace this sample text with requirements, architecture, data models,
+% workflows, and important design decisions.
 
 Listen und erläutern Sie die wichtigsten Anforderungen. Tabellen eignen sich gut,
-wenn Anforderungen nummeriert werden.
+wenn Anforderungen nummeriert werden. Tabelle~\ref{tab:requirements} zeigt eine
+mögliche Struktur.
 
 \section{Anforderungen}
 
-Diese Beispielüberschrift zeigt, wie Abschnitte im Inhaltsverzeichnis aussehen.
+Beschreiben Sie Anforderungen so, dass sie überprüfbar bleiben. Trennen Sie
+funktionale Anforderungen von Qualitätszielen, Randbedingungen und Annahmen.
 
-\subsection{Funktionale Anforderungen}
-
-Diese Beispielunterüberschrift zeigt die nächste Gliederungsebene. Löschen oder
-ersetzen Sie die Beispielüberschriften, sobald die echte Struktur feststeht.
+Die folgende Tabelle zeigt funktionale Anforderungen und Qualitätsziele als
+kompakte Beispiele. Löschen oder ersetzen Sie die Beispielzeilen, sobald die
+echte Struktur feststeht.
 
 \begin{table}[htbp]
   \centering
-  \caption{Beispiel für eine Anforderungstabelle}
+  \caption{Beispiel für eine Anforderungstabelle.}
   \label{tab:requirements}
-  \begin{tabular}{@{}lll@{}}
+  \begin{tabularx}{\textwidth}{@{}llXX@{}}
     \toprule
-    ID & Kategorie & Beschreibung \\
+    ID & Kategorie & Beschreibung & Nachweis \\
     \midrule
-    F1 & Funktional & Beispielanforderung beschreiben \\
-    N1 & Nicht-funktional & Beispielqualitätsziel beschreiben \\
+    F1 & Funktional & Das System verarbeitet Eingabedaten reproduzierbar. &
+      Vergleich definierter Testfälle. \\
+    N1 & Qualität & Ergebnisse werden innerhalb einer nachvollziehbaren
+      Laufzeit erzeugt. & Messung mit repräsentativen Beispieldaten. \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 Beschreiben Sie die geplante System- oder Lösungsarchitektur. Verweisen Sie auf
-Abbildungen mit \verb|\ref|, zum Beispiel Abbildung~\ref{fig:example}.
+Abbildungen mit \verb|\ref|, zum Beispiel zeigt
+Abbildung~\ref{fig:example} eine schematische Darstellung. Ist der Verweis weit
+vom Objekt entfernt, kann zusätzlich \verb|\pageref| verwendet werden.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.65\textwidth]{images/placeholder.jpg}
-  \caption{Beispielabbildung mit Beschriftung und Label}
+  \caption{Beispielabbildung mit Beschriftung und Label.}
   \label{fig:example}
 \end{figure}
 

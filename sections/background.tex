@@ -1,7 +1,24 @@
-% Add background knowledge, definitions, related work, and methods here.
-% Example acronym usage: \ac{API}
-% Example citation usage: \cite{example-source}
+% Replace this sample text with background knowledge, definitions, related work,
+% and methods. Use \ac{...} for acronyms and \cite{...} for sources.
+
+\section{Begriffe und Stand der Technik}
 
 Definieren Sie zentrale Begriffe und fassen Sie relevante Literatur oder
 Technologien zusammen. Quellen werden mit \verb|\cite{...}| referenziert, zum
-Beispiel \cite{example-source}.
+Beispiel \cite{example-source}. Abkürzungen wie \ac{API} werden bei der ersten
+Verwendung ausgeschrieben und danach automatisch in der Kurzform gesetzt.
+
+\section{Gleichungen und Einheiten}
+
+Gleichungen, auf die im Text Bezug genommen wird, sollten nummeriert und mit
+einem Label versehen werden. Gleichung~\eqref{eq:ohms-law} zeigt ein einfaches
+Beispiel.
+
+\begin{equation}
+  U = R \cdot I
+  \label{eq:ohms-law}
+\end{equation}
+
+Physikalische Einheiten sollten nicht kursiv gesetzt werden. Das Paket
+\verb|siunitx| übernimmt die korrekte Formatierung, zum Beispiel
+\qty{5}{\volt} oder \qty{10}{\milli\ampere}.

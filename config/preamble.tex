@@ -18,8 +18,10 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{siunitx}
 
 \usepackage{listings}
 \usepackage[font=small,labelfont=bf]{caption}
@@ -53,6 +55,16 @@
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1.0ex}
+
+% Keep the table of contents readable: chapter, section, and subsection are
+% usually enough for a thesis outline.
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+\sisetup{
+  locale=DE,
+  per-mode=symbol
+}
 
 \pagestyle{fancy}
 \fancyhf{}

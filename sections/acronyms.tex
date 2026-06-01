@@ -1,5 +1,13 @@
-% Keep only abbreviations that are actually used in the thesis.
-% The optional argument should be the widest abbreviation for alignment.
+% Optional: remove this file and its block in main.tex if you use no acronyms.
+% Keep only used abbreviations. The optional argument sets column alignment.
+% Usage summary:
+% - \ac{API}: first use prints the long form with the short form in parentheses;
+%   later uses print only the short form.
+% - \acf{API}: force long form plus short form.
+% - \acs{API}: short form only.
+% - \acl{API}: long form only.
+% - Use \acroplural{...} if the plural is irregular.
+% More examples: https://www.namsu.de/Extra/pakete/Acronym.html
 
 \chapter*{Abkürzungsverzeichnis}
 \phantomsection

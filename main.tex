@@ -1,7 +1,6 @@
 \documentclass[a4paper,12pt,oneside]{report}
 
-% Central template settings. Edit metadata.tex first, then adjust preamble.tex
-% only if your thesis needs different packages or layout rules.
+% Edit metadata.tex first. Change preamble.tex only for layout or package needs.
 \input{config/metadata}
 \input{config/preamble}
 
@@ -16,17 +15,21 @@
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents
 
-% Delete this block if the thesis has no figures.
+% Optional: remove this block if your thesis has no figures.
 \cleardoublepage
 \listoffigures
 
-% Delete this block if the thesis has no source-code listings.
+% Optional: remove this block if your thesis has no tables.
+\cleardoublepage
+\listoftables
+
+% Optional: remove this block if your thesis has no source-code listings.
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
 \lstlistoflistings
 
-% Delete this block if the thesis has no acronyms.
+% Optional: remove this block if your thesis has no acronyms.
 \cleardoublepage
 \input{sections/acronyms}
 
@@ -35,23 +38,29 @@
 \pagenumbering{arabic}
 
 \chapter{Einleitung}
+\label{chap:introduction}
 \input{sections/introduction}
 
 \chapter{Theoretische Grundlagen}
+\label{chap:background}
 \input{sections/background}
 
 \chapter{Konzeption}
+\label{chap:concept}
 \input{sections/concept}
 
 \chapter{Implementierung}
+\label{chap:implementation}
 \input{sections/implementation}
 
 \chapter{Fazit und Ausblick}
+\label{chap:conclusion}
 \input{sections/conclusion}
 
-% Delete this appendix block if the thesis has no appendix.
+% Optional: remove this appendix block if your thesis has no appendix.
 \appendix
 \chapter{Anhang}
+\label{chap:appendix}
 \input{sections/appendix}
 
 \cleardoublepage
