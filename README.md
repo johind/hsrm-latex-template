@@ -10,6 +10,10 @@ chapters, add sources, and build `main.pdf`.
 | --------------------------------------------- | -------------------------------------------------- |
 | ![Cover page preview](docs/preview-cover.png) | ![Table of contents preview](docs/preview-toc.png) |
 
+For a full generated example, see the
+[PDF preview](https://github.com/johind/hsrm-latex-template/releases/latest/download/preview.pdf)
+attached to the latest release.
+
 The `docs/` folder is only used for repository presentation assets such as these
 preview images. You can safely delete it when starting your own thesis.
 
