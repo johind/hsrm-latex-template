@@ -14,15 +14,13 @@ For a full generated example, see the
 [PDF preview](https://github.com/johind/hsrm-latex-template/releases/latest/download/preview.pdf)
 attached to the latest release.
 
-The `docs/` folder is only used for repository presentation assets such as these
-preview images. You can safely delete it when starting your own thesis.
-
 ## Getting the Template
 
-If you are not used to Git or GitHub, download the template as a ZIP file from
-the [latest release](https://github.com/johind/hsrm-latex-template/releases/latest).
-On the release page, use the source-code ZIP, unpack it, and start editing the
-files in the extracted folder.
+If you are not used to Git or GitHub, use the ZIP download:
+
+1. Open the [latest release](https://github.com/johind/hsrm-latex-template/releases/latest).
+2. Download the source-code ZIP file.
+3. Unpack it and start editing the extracted folder.
 
 If you work with Git, clone the repository instead:
 
@@ -32,6 +30,9 @@ cd hsrm-latex-template
 ```
 
 ## Quick Start
+
+You need a LaTeX distribution with `latexmk`, such as TeX Live or MiKTeX. The
+template also works well on Overleaf.
 
 1. Edit `config/metadata.tex`.
 2. Write your chapters in `sections/`.
@@ -55,8 +56,9 @@ latexmk -c
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
 - `sections/`: English-named files for the cover page, front matter, chapters,
   and appendix.
-- `images/`: placeholder logo and image assets used by the thesis.
-- `docs/`: optional preview assets for the GitHub repository.
+- `images/`: logo and image assets used by the thesis.
+- `docs/`: preview assets for the GitHub repository. You can delete this folder
+  when starting your own thesis.
 - `references.bib`: BibTeX bibliography database.
 
 ## Common Tasks
@@ -137,8 +139,7 @@ supervisor. In particular:
   and whether a printed copy is required.
 - Add the official declaration of independent work required by your programme or
   examination office. This template intentionally does not include one.
-- Replace `images/logo.png` with a logo or placeholder image you are allowed to
-  use.
+- Keep the logo license note below if you publish or redistribute the template.
 - Update the preview images in `docs/` if you publish a changed version of the
   template.
 
