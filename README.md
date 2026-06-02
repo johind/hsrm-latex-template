@@ -139,15 +139,27 @@ supervisor. In particular:
   and whether a printed copy is required.
 - Add the official declaration of independent work required by your programme or
   examination office. This template intentionally does not include one.
-- Keep the logo license note below if you publish or redistribute the template.
+- Do not publish or redistribute a copy that contains the official logo unless
+  you have your own permission from Hochschule RheinMain.
 - Update the preview images in `docs/` if you publish a changed version of the
   template.
 
 ## License
 
-This template is licensed under the MIT License.
+The LaTeX template source is licensed under the MIT License.
 
-The official Hochschule RheinMain logo included in `images/logo.png` is
-excluded from the open-source license. It is included with permission for this
-unofficial template only and remains subject to the university's logo and brand
-usage rules. This project is not an official Hochschule RheinMain template.
+### Logo Notice
+
+The official Hochschule RheinMain logo included in `images/logo.png` is not part
+of the MIT-licensed material. Permission to include the logo was granted to the
+maintainer of this repository for this exact unofficial template repository
+only. That permission is not transferable.
+
+Do not publish a fork, clone, mirror, release archive, generated PDF,
+screenshot, or other redistributed copy that contains the logo unless you have
+obtained your own permission from Hochschule RheinMain. If you publish or
+redistribute a modified version of this template, remove or replace
+`images/logo.png` and any generated assets that show it, such as preview images
+or PDFs.
+
+This project is not an official Hochschule RheinMain template.
