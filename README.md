@@ -98,6 +98,20 @@ the full form, `\acs` for the short form, and `\acl` for the long form. The
 [Namsu acronym package overview](https://www.namsu.de/Extra/pakete/Acronym.html)
 has a compact reference for these commands and plural forms.
 
+### Add a Code Listing
+
+Use the `listings` package for short, relevant code excerpts:
+
+```tex
+\begin{lstlisting}[language=Python,caption={Short example.},label={lst:example}]
+def format_label(name):
+    return f"Hallo {name}"
+\end{lstlisting}
+```
+
+Change `language=Python` to another supported language such as `Java`, `C++`,
+`SQL`, `HTML`, or `XML`. Put long listings in the appendix.
+
 ### Add a Numbered Equation
 
 Only number equations that you reference in the text:

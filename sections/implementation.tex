@@ -10,8 +10,11 @@ gehören eher in den Anhang; im Hauptteil sollten nur relevante Ausschnitte
 stehen.
 
 \begin{lstlisting}[language=Python,caption={Kurzes Beispiel für ein Listing.},label={lst:example}]
-def greet(name):
-    return f"Hallo {name}"
+def format_label(name: str, version: int) -> str:
+    # Keep labels stable for reports and exported files.
+    if version <= 1:
+        return name
+    return f"{name} v{version}"
 \end{lstlisting}
 
 Auf Listing~\ref{lst:example} kann anschließend im Text verwiesen werden.

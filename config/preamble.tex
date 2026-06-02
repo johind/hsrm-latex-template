@@ -23,6 +23,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{siunitx}
 
+\usepackage{upquote}
 \usepackage{listings}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{subcaption}
@@ -87,23 +88,38 @@
 % ---------------------------------------------------------------------------
 % Source-code listings
 % ---------------------------------------------------------------------------
-% Use \begin{lstlisting}[language=Python,caption={...},label={lst:example}] for
-% code examples. Add language-specific styles here if your thesis needs them.
+% Use language=Python, Java, C++, SQL, HTML, XML, etc. as needed.
+% Long listings are usually better placed in the appendix.
+\definecolor{listingbackground}{HTML}{F8F6FC}
+\definecolor{listingrule}{HTML}{5940D9}
+\definecolor{listingnumber}{HTML}{8A8494}
+\definecolor{listingkeyword}{HTML}{5940D9}
+\definecolor{listingcomment}{HTML}{6F6A75}
+\definecolor{listingstring}{HTML}{982D5D}
+
 \lstdefinestyle{thesislisting}{
-  basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\color{blue!70!black},
-  commentstyle=\color{gray}\itshape,
-  stringstyle=\color{green!40!black},
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{listingbackground},
+  keywordstyle=\bfseries\color{listingkeyword},
+  commentstyle=\itshape\color{listingcomment},
+  stringstyle=\color{listingstring},
   numbers=left,
-  numberstyle=\tiny\color{gray},
+  numberstyle=\scriptsize\color{listingnumber},
   stepnumber=1,
-  numbersep=8pt,
-  frame=single,
+  numbersep=14pt,
+  frame=leftline,
+  rulecolor=\color{listingrule},
+  framesep=8pt,
+  framerule=2pt,
+  xleftmargin=1.6em,
   breaklines=true,
   breakatwhitespace=true,
+  columns=fullflexible,
+  keepspaces=true,
   tabsize=2,
   captionpos=b,
-  showstringspaces=false
+  showstringspaces=false,
+  upquote=true
 }
 \lstset{style=thesislisting}
 \renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
@@ -111,4 +127,5 @@
 % ---------------------------------------------------------------------------
 % Helper commands
 % ---------------------------------------------------------------------------
+\newcommand{\code}[1]{\texttt{#1}}
 \newcommand{\placeholder}[1]{\textcolor{red!70!black}{#1}}
