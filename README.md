@@ -43,7 +43,7 @@ template also works well on Overleaf.
 make
 ```
 
-The Makefile is only a convenience wrapper. You can also run `latexmk`
+The [Makefile](https://makefiletutorial.com) is only a convenience wrapper. You can also run `latexmk`
 directly:
 
 ```sh
