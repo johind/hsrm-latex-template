@@ -40,13 +40,20 @@ template also works well on Overleaf.
 4. Build the PDF:
 
 ```sh
+make
+```
+
+The Makefile is only a convenience wrapper. You can also run `latexmk`
+directly:
+
+```sh
 latexmk -pdf main.tex
 ```
 
 To clean generated build files:
 
 ```sh
-latexmk -c
+make clean
 ```
 
 ## Structure
@@ -54,6 +61,7 @@ latexmk -c
 - `main.tex`: document order and optional front/back matter.
 - `config/metadata.tex`: title, author, supervisors, programme, submission date.
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
+- `Makefile`: small `latexmk` wrapper for building and cleaning.
 - `sections/`: English-named files for the cover page, front matter, chapters,
   and appendix.
 - `images/`: logo and image assets used by the thesis.
@@ -74,7 +82,7 @@ latexmk -c
 \end{figure}
 ```
 
-Refer to it with `Abbildung~\ref{fig:my-figure}`.
+Refer to it with `\cref{fig:my-figure}`.
 
 ### Add a Citation
 
@@ -83,6 +91,11 @@ Add the source to `references.bib`, then cite it:
 ```tex
 \cite{my-source-key}
 ```
+
+For online sources, include the URL and access date, for example with
+`howpublished = {\url{...}}` and `note = {Zugriff am ...}`.
+Protect brand names and unusual capitalization in BibTeX titles with braces,
+for example `title = {{Hochschule RheinMain}}`.
 
 ### Add an Acronym
 
@@ -123,15 +136,15 @@ Only number equations that you reference in the text:
 \end{equation}
 ```
 
-Refer to it with `Gleichung~\eqref{eq:ohms-law}`. Use `siunitx` for physical
-units, for example `\qty{5}{\volt}`.
+Refer to it with `\cref{eq:ohms-law}` or `\eqref{eq:ohms-law}`. Use `siunitx`
+for physical units, for example `\qty{5}{\volt}`.
 
 ## Writing Checklist
 
 - Keep the table of contents readable; avoid turning every paragraph into a
   subsection.
 - Let LaTeX generate references to chapters, sections, figures, tables,
-  listings, and equations with `\label` and `\ref`.
+  listings, and equations with `\label` and `\cref`.
 - Refer to every figure and table in the text, ideally before the object is
   shown.
 - Choose print-friendly image formats and colors, especially for screenshots,

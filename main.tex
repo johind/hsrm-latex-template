@@ -1,4 +1,13 @@
-\documentclass[a4paper,12pt,oneside]{report}
+\documentclass[
+  a4paper,
+  12pt,
+  oneside,
+  headings=normal,
+  listof=totoc,
+  bibliography=totoc,
+  numbers=noenddot,
+  parskip=half
+]{scrreprt}
 
 % Edit metadata.tex first. Change preamble.tex only for layout or package needs.
 \input{config/metadata}
@@ -25,8 +34,6 @@
 
 % Optional: remove this block if your thesis has no source-code listings.
 \cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\lstlistlistingname}
 \lstlistoflistings
 
 % Optional: remove this block if your thesis has no acronyms.

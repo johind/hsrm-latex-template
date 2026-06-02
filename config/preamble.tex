@@ -2,20 +2,27 @@
 % Packages
 % ---------------------------------------------------------------------------
 % This template targets pdfLaTeX because it is widely available on Overleaf,
-% TeX Live, and MiKTeX. If you switch to LuaLaTeX or XeLaTeX, remove inputenc.
+% TeX Live, and MiKTeX.
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{lmodern}
 \usepackage{csquotes}
-\usepackage{etoolbox}
 
-\usepackage[a4paper,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm,headheight=14pt]{geometry}
+\usepackage[a4paper,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm,headheight=18pt]{geometry}
 \usepackage{setspace}
 \usepackage{microtype}
 
 \usepackage{xcolor}
+\definecolor{hsrmviolet}{HTML}{341D48}
+\definecolor{hsrmmagenta}{HTML}{A71F5F}
+\definecolor{hsrmpurple}{HTML}{5C40E0}
+\definecolor{hsrmtext}{HTML}{202020}
+\definecolor{hsrmmuted}{HTML}{6F6A75}
+\definecolor{hsrmrule}{HTML}{D6D1DD}
+\definecolor{hsrmlink}{HTML}{341D48}
+
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -25,20 +32,19 @@
 
 \usepackage{upquote}
 \usepackage{listings}
-\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{caption}
 \usepackage{subcaption}
 \usepackage[nohyperlinks]{acronym}
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\usepackage[nottoc]{tocbibind}
+\usepackage[automark,headsepline]{scrlayer-scrpage}
 \usepackage[
   colorlinks=true,
   linkcolor=black,
   citecolor=black,
-  urlcolor=blue,
+  urlcolor=hsrmlink,
   pdfusetitle
 ]{hyperref}
 \usepackage{bookmark}
+\usepackage[ngerman,nameinlink,noabbrev]{cleveref}
 
 % ---------------------------------------------------------------------------
 % PDF metadata
@@ -54,8 +60,6 @@
 % Layout
 % ---------------------------------------------------------------------------
 \onehalfspacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{1.0ex}
 
 % Keep the table of contents readable: chapter, section, and subsection are
 % usually enough for a thesis outline.
@@ -67,23 +71,64 @@
   per-mode=symbol
 }
 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\small\nouppercase{\leftmark}}
-\fancyhead[R]{\small\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\captionsetup{
+  font=small,
+  labelfont={bf,color=hsrmviolet}
+}
 
-\titleformat{\chapter}[hang]
-  {\normalfont\huge\bfseries}
-  {\thechapter}
-  {1em}
-  {}
-\titleformat{name=\chapter,numberless}[hang]
-  {\normalfont\huge\bfseries}
-  {}
-  {0pt}
-  {}
-\titlespacing*{\chapter}{0pt}{0pt}{2.5em}
+\setlist{
+  itemsep=0.2ex,
+  parsep=0pt,
+  topsep=0.8ex
+}
+
+\clearpairofpagestyles
+\automark[section]{chapter}
+\ihead{\headmark}
+\ohead{\pagemark}
+\ofoot[\pagemark]{}
+\pagestyle{scrheadings}
+
+\setkomafont{disposition}{\normalfont\bfseries\color{hsrmtext}}
+\setkomafont{pageheadfoot}{\small\normalfont\color{hsrmmuted}}
+\setkomafont{pagenumber}{\small\normalfont\color{hsrmmuted}}
+\setkomafont{headsepline}{\color{hsrmrule}}
+\setkomafont{chapter}{\huge}
+\setkomafont{section}{\Large}
+\setkomafont{subsection}{\large}
+
+\RedeclareSectionCommand[
+  beforeskip=0pt,
+  afterskip=2.4em
+]{chapter}
+\RedeclareSectionCommand[
+  beforeskip=2.8ex plus 0.6ex minus 0.2ex,
+  afterskip=1.1ex plus 0.2ex
+]{section}
+\RedeclareSectionCommand[
+  beforeskip=2.2ex plus 0.5ex minus 0.2ex,
+  afterskip=0.8ex plus 0.2ex
+]{subsection}
+
+\DeclareTOCStyleEntry[
+  beforeskip=1.65ex plus 0.3ex
+]{tocline}{chapter}
+\DeclareTOCStyleEntries[
+  beforeskip=0.18ex plus 0.08ex
+]{tocline}{section,subsection}
+
+\crefname{chapter}{Kapitel}{Kapitel}
+\Crefname{chapter}{Kapitel}{Kapitel}
+\crefname{section}{Abschnitt}{Abschnitte}
+\Crefname{section}{Abschnitt}{Abschnitte}
+\crefname{figure}{Abbildung}{Abbildungen}
+\Crefname{figure}{Abbildung}{Abbildungen}
+\crefname{table}{Tabelle}{Tabellen}
+\Crefname{table}{Tabelle}{Tabellen}
+\crefname{equation}{Gleichung}{Gleichungen}
+\Crefname{equation}{Gleichung}{Gleichungen}
+\crefname{lstlisting}{Listing}{Listings}
+\Crefname{lstlisting}{Listing}{Listings}
 
 % ---------------------------------------------------------------------------
 % Source-code listings
@@ -91,11 +136,11 @@
 % Use language=Python, Java, C++, SQL, HTML, XML, etc. as needed.
 % Long listings are usually better placed in the appendix.
 \definecolor{listingbackground}{HTML}{F8F6FC}
-\definecolor{listingrule}{HTML}{5940D9}
+\definecolor{listingrule}{HTML}{5C40E0}
 \definecolor{listingnumber}{HTML}{8A8494}
-\definecolor{listingkeyword}{HTML}{5940D9}
+\definecolor{listingkeyword}{HTML}{5C40E0}
 \definecolor{listingcomment}{HTML}{6F6A75}
-\definecolor{listingstring}{HTML}{982D5D}
+\definecolor{listingstring}{HTML}{A71F5F}
 
 \lstdefinestyle{thesislisting}{
   basicstyle=\ttfamily\small,
