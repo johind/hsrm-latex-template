@@ -1,6 +1,6 @@
 # HSRM LaTeX Thesis Template
 
-This repository is a starter template for bachelor and project theses at
+This repository is a starter template for projects or bachelor and master theses at
 Hochschule RheinMain. It is intentionally small: edit the metadata, write your
 chapters, add sources, and build `main.pdf`.
 
