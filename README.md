@@ -146,37 +146,16 @@ Only number equations that you reference in the text:
 Refer to it with `\cref{eq:ohms-law}` or `\eqref{eq:ohms-law}`. Use `siunitx`
 for physical units, for example `\qty{5}{\volt}`.
 
-## Writing Checklist
+## Template Limitations
 
-- Keep the table of contents readable; avoid turning every paragraph into a
-  subsection.
-- Let LaTeX generate references to chapters, sections, figures, tables,
-  listings, and equations with `\label` and `\cref`.
-- Refer to every figure and table in the text, ideally before the object is
-  shown.
-- Choose print-friendly image formats and colors, especially for screenshots,
-  diagrams, and measurement plots.
-- Put long listings, derivations, datasheets, and supplementary files in the
-  appendix instead of interrupting the main argument.
-- Keep the abbreviation list alphabetically sorted and include only
-  abbreviations that are actually used.
+This is an unofficial template. Requirements vary by programme, examination
+regulations, and supervisor.
 
-## Before Submission
-
-Check the current requirements from your programme, examination regulations, and
-supervisor. In particular:
-
-- Remove unused optional blocks from `main.tex`, such as lists, acronyms, or the
-  appendix.
-- Replace `\today` with a fixed submission date in `config/metadata.tex`.
-- Verify title-page wording, margins, citation style, digital submission rules,
-  and whether a printed copy is required.
-- Add the official declaration of independent work required by your programme or
-  examination office. This template intentionally does not include one.
-- Do not publish or redistribute a copy that contains the official logo unless
-  you have your own permission from Hochschule RheinMain.
-- Update the preview images in `docs/` if you publish a changed version of the
-  template.
+- The declaration of independent work is intentionally not included.
+- The submission date defaults to `\today`; replace it with a fixed date in
+  `config/metadata.tex` before submission.
+- The included Hochschule RheinMain logo cannot be redistributed without
+  permission. See the [logo notice](#logo-notice) below.
 
 ## License
 
@@ -195,5 +174,3 @@ obtained your own permission from Hochschule RheinMain. If you publish or
 redistribute a modified version of this template, remove or replace
 `images/logo.png` and any generated assets that show it, such as preview images
 or PDFs.
-
-This project is not an official Hochschule RheinMain template.
