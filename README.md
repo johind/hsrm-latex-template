@@ -1,8 +1,8 @@
 # HSRM LaTeX Thesis Template
 
-This repository is a starter template for projects or bachelor and master theses at
-Hochschule RheinMain. It is intentionally small: edit the metadata, write your
-chapters, add sources, and build `main.pdf`.
+This repository is a starter template for projects, bachelor's theses, and
+master's theses at Hochschule RheinMain. It is intentionally small: edit the
+metadata, write your chapters, add sources, and build `main.pdf`.
 
 ## Preview
 
@@ -31,8 +31,9 @@ cd hsrm-latex-template
 
 ## Quick Start
 
-You need a LaTeX distribution with `latexmk`, such as TeX Live or MiKTeX. The
-template also works well on Overleaf.
+You need a LaTeX distribution with `latexmk`, such as TeX Live or MiKTeX. To use
+the template on Overleaf, upload the source-code ZIP as a new project and compile
+`main.tex` with pdfLaTeX.
 
 1. Edit `config/metadata.tex`.
 2. Write your chapters in `sections/`.
@@ -40,20 +41,26 @@ template also works well on Overleaf.
 4. Build the PDF:
 
 ```sh
-make
-```
-
-The [Makefile](https://makefiletutorial.com) is only a convenience wrapper. You can also run `latexmk`
-directly:
-
-```sh
 latexmk -pdf main.tex
 ```
 
-To clean generated build files:
+If you use `make`, the included `Makefile` provides a shorter command for the
+same build:
+
+```sh
+make
+```
+
+To clean auxiliary build files while keeping `main.pdf`:
 
 ```sh
 make clean
+```
+
+To remove auxiliary files and `main.pdf`:
+
+```sh
+make distclean
 ```
 
 ## Structure
