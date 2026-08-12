@@ -1,6 +1,8 @@
-# HSRM LaTeX Thesis Template
+# LaTeX Thesis Template for Hochschule RheinMain (HSRM)
 
 [![Latest release](https://img.shields.io/github/v/release/johind/hsrm-latex-template?sort=semver)](https://github.com/johind/hsrm-latex-template/releases/latest)
+[![Build](https://github.com/johind/hsrm-latex-template/actions/workflows/build.yml/badge.svg)](https://github.com/johind/hsrm-latex-template/actions/workflows/build.yml)
+[![ZIP downloads](https://img.shields.io/github/downloads/johind/hsrm-latex-template/total/hsrm-latex-template.zip?label=ZIP%20downloads)](https://github.com/johind/hsrm-latex-template/releases/latest/download/hsrm-latex-template.zip)
 
 Use this template to prepare academic projects, bachelor's theses, and master's
 theses at Hochschule RheinMain. Enter the document details in
@@ -22,9 +24,8 @@ Choose one of the following setup methods.
 
 ### ZIP Download
 
-1. Open the [latest release](https://github.com/johind/hsrm-latex-template/releases/latest).
-2. Under **Assets**, download **Source code (zip)**.
-3. Extract the archive.
+1. Download [`hsrm-latex-template.zip`](https://github.com/johind/hsrm-latex-template/releases/latest/download/hsrm-latex-template.zip).
+2. Extract the archive.
 
 ### Git
 
@@ -35,8 +36,7 @@ cd hsrm-latex-template
 
 ### Overleaf
 
-1. Download the source-code ZIP from the
-   [latest release](https://github.com/johind/hsrm-latex-template/releases/latest).
+1. Download [`hsrm-latex-template.zip`](https://github.com/johind/hsrm-latex-template/releases/latest/download/hsrm-latex-template.zip).
 2. In Overleaf, select **New Project** and **Upload Project**.
 3. Upload the ZIP file.
 4. Set the compiler to **pdfLaTeX** and the main document to `main.tex`.
