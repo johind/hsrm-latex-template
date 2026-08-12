@@ -1,8 +1,11 @@
 # HSRM LaTeX Thesis Template
 
-This repository is a starter template for projects, bachelor's theses, and
-master's theses at Hochschule RheinMain. It is intentionally small: edit the
-metadata, write your chapters, add sources, and build `main.pdf`.
+[![Latest release](https://img.shields.io/github/v/release/johind/hsrm-latex-template?sort=semver)](https://github.com/johind/hsrm-latex-template/releases/latest)
+
+Use this template to prepare academic projects, bachelor's theses, and master's
+theses at Hochschule RheinMain. Enter the document details in
+`config/metadata.tex`, add chapters under `sections/`, manage sources in
+`references.bib`, and compile `main.tex`.
 
 ## Preview
 
@@ -10,57 +13,68 @@ metadata, write your chapters, add sources, and build `main.pdf`.
 | --------------------------------------------- | -------------------------------------------------- |
 | ![Cover page preview](docs/preview-cover.png) | ![Table of contents preview](docs/preview-toc.png) |
 
-For a full generated example, see the
-[PDF preview](https://github.com/johind/hsrm-latex-template/releases/latest/download/preview.pdf)
-attached to the latest release.
+Open the [complete PDF preview](https://github.com/johind/hsrm-latex-template/releases/latest/download/preview.pdf)
+to review the generated document.
 
 ## Getting the Template
 
-If you are not used to Git or GitHub, use the ZIP download:
+Choose one of the following setup methods.
+
+### ZIP Download
 
 1. Open the [latest release](https://github.com/johind/hsrm-latex-template/releases/latest).
-2. Download the source-code ZIP file.
-3. Unpack it and start editing the extracted folder.
+2. Under **Assets**, download **Source code (zip)**.
+3. Extract the archive.
 
-If you work with Git, clone the repository instead:
+### Git
 
 ```sh
 git clone https://github.com/johind/hsrm-latex-template.git
 cd hsrm-latex-template
 ```
 
+### Overleaf
+
+1. Download the source-code ZIP from the
+   [latest release](https://github.com/johind/hsrm-latex-template/releases/latest).
+2. In Overleaf, select **New Project** and **Upload Project**.
+3. Upload the ZIP file.
+4. Set the compiler to **pdfLaTeX** and the main document to `main.tex`.
+
 ## Quick Start
 
-You need a LaTeX distribution with `latexmk`, such as TeX Live or MiKTeX. To use
-the template on Overleaf, upload the source-code ZIP as a new project and compile
-`main.tex` with pdfLaTeX.
-
-1. Edit `config/metadata.tex`.
-2. Write your chapters in `sections/`.
-3. Add bibliography entries to `references.bib`.
-4. Build the PDF:
+Local builds require [TeX Live](https://tug.org/texlive/) or
+[MiKTeX](https://miktex.org/download) with `latexmk`. Build the unchanged
+template once to confirm that the LaTeX installation works:
 
 ```sh
 latexmk -pdf main.tex
 ```
 
-If you use `make`, the included `Makefile` provides a shorter command for the
-same build:
+A successful build creates `main.pdf`. Then customize the document:
+
+1. Set the title, document type, author, programme, supervisors, and submission
+   date in `config/metadata.tex`.
+2. Review the document order and optional lists in `main.tex`.
+3. Write the chapters in `sections/`.
+4. Add bibliography entries to `references.bib`.
+5. Build the PDF:
+
+```sh
+latexmk -pdf main.tex
+```
+
+Run `make` to build the document with the included Makefile:
 
 ```sh
 make
 ```
 
-To clean auxiliary build files while keeping `main.pdf`:
+Use the following cleanup commands:
 
 ```sh
-make clean
-```
-
-To remove auxiliary files and `main.pdf`:
-
-```sh
-make distclean
+make clean       # Remove auxiliary files and keep main.pdf
+make distclean   # Remove auxiliary files and main.pdf
 ```
 
 ## Structure
@@ -68,12 +82,12 @@ make distclean
 - `main.tex`: document order and optional front/back matter.
 - `config/metadata.tex`: title, author, supervisors, programme, submission date.
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
-- `Makefile`: small `latexmk` wrapper for building and cleaning.
+- `Makefile`: commands for building the PDF and cleaning generated files.
 - `sections/`: English-named files for the cover page, front matter, chapters,
   and appendix.
 - `images/`: logo and image assets used by the thesis.
-- `docs/`: preview assets for the GitHub repository. You can delete this folder
-  when starting your own thesis.
+- `docs/`: preview images for this repository; safe to delete from a thesis
+  project.
 - `references.bib`: BibTeX bibliography database.
 
 ## Common Tasks
@@ -115,8 +129,8 @@ Add acronyms in `sections/acronyms.tex`:
 Use `\ac{API}` in the text. On first use it prints the long form with the
 short form in parentheses; later uses print only the short form. Use `\acf` for
 the full form, `\acs` for the short form, and `\acl` for the long form. The
-[Namsu acronym package overview](https://www.namsu.de/Extra/pakete/Acronym.html)
-has a compact reference for these commands and plural forms.
+[acronym package documentation](https://ctan.org/pkg/acronym) covers the
+available commands, options, and plural forms.
 
 ### Add a Code Listing
 
@@ -134,7 +148,7 @@ Change `language=Python` to another supported language such as `Java`, `C++`,
 
 ### Add a Numbered Equation
 
-Only number equations that you reference in the text:
+Use a numbered equation when you refer to it in the text:
 
 ```tex
 \begin{equation}
@@ -146,27 +160,37 @@ Only number equations that you reference in the text:
 Refer to it with `\cref{eq:ohms-law}` or `\eqref{eq:ohms-law}`. Use `siunitx`
 for physical units, for example `\qty{5}{\volt}`.
 
-## Template Limitations
+## Troubleshooting
 
-This is an unofficial template. Requirements vary by programme, examination
-regulations, and supervisor.
+- Run `latexmk -v` to confirm that `latexmk` is installed and available on the
+  command line.
+- Install any missing LaTeX package with the package manager supplied by TeX
+  Live or MiKTeX.
+- Run `make distclean` followed by `make` after changing packages, bibliography
+  settings, or generated lists.
 
-- The declaration of independent work is intentionally not included.
-- The submission date defaults to `\today`; replace it with a fixed date in
-  `config/metadata.tex` before submission.
-- The included Hochschule RheinMain logo cannot be redistributed without
-  permission. See the [logo notice](#logo-notice) below.
+## Before Submission
+
+This is an unofficial template. Confirm the required structure and formatting
+with your programme, examination regulations, and supervisor.
+
+- Add the declaration of independent work required by your programme.
+- Replace `\today` with the fixed submission date in `config/metadata.tex`.
+- Review the title, document type, author, student number, programme, and
+  supervisors in `config/metadata.tex`.
+- Obtain permission from Hochschule RheinMain before redistributing the
+  included logo. See the [logo notice](#logo-notice).
 
 ## License
 
-The LaTeX template source is licensed under the MIT License.
+The MIT License covers the LaTeX template source.
 
 ### Logo Notice
 
-The official Hochschule RheinMain logo included in `images/logo.png` is not part
-of the MIT-licensed material. Permission to include the logo was granted to the
-maintainer of this repository for this exact unofficial template repository
-only. That permission is not transferable.
+Hochschule RheinMain retains the rights to the official logo in
+`images/logo.png`. The maintainer has permission to include it in this
+repository. This permission applies to this repository and cannot be
+transferred.
 
 Do not publish a fork, clone, mirror, release archive, generated PDF,
 screenshot, or other redistributed copy that contains the logo unless you have
