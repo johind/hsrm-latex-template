@@ -89,8 +89,8 @@ make distclean   # Remove auxiliary files and main.pdf
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
 - `Makefile`: commands for building the PDF and cleaning generated files.
 - `AGENTS.md`: general project guidance for AI coding agents.
-- `sections/`: English-named files for the cover page, optional abstract, front
-  matter, chapters, and appendix. Chapter headings and labels intentionally live
+- `sections/`: files for the cover page, optional abstract, front
+  matter, chapters, and appendix. Chapter headings and labels live
   in `main.tex`, while their content lives in the corresponding section files.
 - `images/`: logo and image assets used by the thesis.
 - `docs/`: preview images for this repository; safe to delete.
@@ -196,12 +196,6 @@ with your programme, examination regulations, and supervisor.
 ## License
 
 The MIT License covers the LaTeX template source.
-Keep the included `LICENSE` when redistributing the template or a modified copy.
-
-The PDF metadata describes the thesis itself: its author is the student, not
-the template maintainer. Do not add the template copyright or attribution to
-the generated PDF. This repository was created as an original template rather
-than derived from another template, so there is no upstream template to name.
 
 ### Logo Notice
 
