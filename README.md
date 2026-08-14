@@ -84,11 +84,11 @@ make distclean   # Remove auxiliary files and main.pdf
 - `config/metadata.tex`: title, author, supervisors, programme, submission date.
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
 - `Makefile`: commands for building the PDF and cleaning generated files.
+- `AGENTS.md`: general project guidance for AI coding agents.
 - `sections/`: English-named files for the cover page, front matter, chapters,
   and appendix.
 - `images/`: logo and image assets used by the thesis.
-- `docs/`: preview images for this repository; safe to delete from a thesis
-  project.
+- `docs/`: preview images for this repository; safe to delete.
 - `references.bib`: BibTeX bibliography database.
 
 ## Common Tasks
