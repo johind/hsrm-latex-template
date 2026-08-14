@@ -4,6 +4,7 @@
 main.aux
 main.bbl
 main.bbl-SAVE-ERROR
+main.bcf
 main.blg
 main.fdb_latexmk
 main.fls
@@ -13,6 +14,7 @@ main.lol
 main.lot
 main.out
 main.pdf
+main.run.xml
 main.toc
 main.synctex.gz
 main-blx.bib

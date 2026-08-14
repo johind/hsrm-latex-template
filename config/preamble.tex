@@ -10,6 +10,11 @@
 \usepackage{lmodern}
 \usepackage{csquotes}
 \usepackage{etoolbox}
+\usepackage[
+  backend=biber,
+  style=alphabetic
+]{biblatex}
+\addbibresource{references.bib}
 
 \usepackage[a4paper,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm,headheight=18pt]{geometry}
 \usepackage{setspace}
@@ -43,6 +48,8 @@
   urlcolor=hsrmlink,
   pdfusetitle
 ]{hyperref}
+% Allow long URLs and identifiers to wrap before they reach the page margin.
+\usepackage{xurl}
 \usepackage{bookmark}
 \usepackage[ngerman,nameinlink,noabbrev]{cleveref}
 
