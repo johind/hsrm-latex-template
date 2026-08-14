@@ -5,16 +5,21 @@
 [![Downloads](https://img.shields.io/github/downloads/johind/hsrm-latex-template/hsrm-latex-template.zip?label=Downloads&displayAssetName=false)](https://github.com/johind/hsrm-latex-template/releases/latest/download/hsrm-latex-template.zip)
 [![Code License](https://img.shields.io/github/license/johind/hsrm-latex-template?label=Code%20License)](#license)
 
-Use this template to prepare academic projects, bachelor's theses, and master's
-theses at Hochschule RheinMain. Enter the document details in
-`config/metadata.tex`, add chapters under `sections/`, manage sources in
-`references.bib`, and compile `main.tex`.
+This template provides a good starting point for academic projects, bachelor's
+and master's theses at Hochschule RheinMain. It covers everything from the layout
+and structure of the document — including the cover page, chapters, equations,
+figures, tables and source code listings — to citations, cross-references, units,
+acronyms, the table of contents, lists of figures, tables and listings,
+appendices and the bibliography.
+
+Enter the document details in `config/metadata.tex`, add chapters under
+`sections/`, manage sources in `references.bib`, and compile `main.tex`.
 
 ## Preview
 
-| Cover page                                    | Table of contents                                  |
-| --------------------------------------------- | -------------------------------------------------- |
-| ![Cover page preview](docs/preview-cover.png) | ![Table of contents preview](docs/preview-toc.png) |
+| Cover Page                                    | Table of Contents                                  | Equations                                        |
+| --------------------------------------------- | -------------------------------------------------- | ------------------------------------------------ |
+| ![Cover page preview](docs/preview-cover.png) | ![Table of contents preview](docs/preview-toc.png) | ![Equations preview](docs/preview-equations.png) |
 
 Open the [complete PDF preview](https://github.com/johind/hsrm-latex-template/releases/latest/download/preview.pdf)
 to review the generated document.

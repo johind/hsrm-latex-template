@@ -16,3 +16,6 @@ main.pdf
 main.toc
 main.synctex.gz
 main-blx.bib
+
+# Local preview generation helper
+/scripts/
