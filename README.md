@@ -20,7 +20,7 @@ Enter the document details in `config/metadata.tex`, add chapters under
 | ![Cover page preview](docs/preview-cover.png) | ![Table of contents preview](docs/preview-toc.png) | ![Equations preview](docs/preview-equations.png) |
 
 Open the [complete PDF preview](https://github.com/johind/hsrm-latex-template/releases/latest/download/preview.pdf)
-to review the generated document.
+to get a sense of the template.
 
 ## Getting the Template
 
@@ -48,8 +48,9 @@ cd hsrm-latex-template
 ## Quick Start
 
 Local builds require [TeX Live](https://tug.org/texlive/) or
-[MiKTeX](https://miktex.org/download) with `latexmk`. Build the unchanged
-template once to confirm that the LaTeX installation works:
+[MiKTeX](https://miktex.org/download) with `latexmk` and Biber. `latexmk` runs
+Biber automatically when the bibliography changes. Build the unchanged template
+once to confirm that the LaTeX installation works:
 
 ```sh
 latexmk -pdf main.tex
@@ -88,11 +89,12 @@ make distclean   # Remove auxiliary files and main.pdf
 - `config/preamble.tex`: packages, layout, PDF metadata, listing style.
 - `Makefile`: commands for building the PDF and cleaning generated files.
 - `AGENTS.md`: general project guidance for AI coding agents.
-- `sections/`: English-named files for the cover page, front matter, chapters,
-  and appendix.
+- `sections/`: English-named files for the cover page, optional abstract, front
+  matter, chapters, and appendix. Chapter headings and labels intentionally live
+  in `main.tex`, while their content lives in the corresponding section files.
 - `images/`: logo and image assets used by the thesis.
 - `docs/`: preview images for this repository; safe to delete.
-- `references.bib`: BibTeX bibliography database.
+- `references.bib`: bibliography database processed by Biber.
 
 ## Common Tasks
 
@@ -117,10 +119,16 @@ Add the source to `references.bib`, then cite it:
 \cite{my-source-key}
 ```
 
-For online sources, include the URL and access date, for example with
-`howpublished = {\url{...}}` and `note = {Zugriff am ...}`.
-Protect brand names and unusual capitalization in BibTeX titles with braces,
+For online sources, include the URL and access date with `url` and an ISO-formatted
+`urldate`, for example `urldate = {2026-05-27}`.
+Protect brand names and unusual capitalization in bibliography titles with braces,
 for example `title = {{Hochschule RheinMain}}`.
+
+### Add Quotation Marks
+
+Use `\enquote{...}` for quotation marks that follow the active document language,
+for example `\enquote{ein deutsches Zitat}`. Avoid typing straight quotation marks
+or language-specific opening and closing characters manually.
 
 ### Add an Acronym
 
@@ -188,6 +196,12 @@ with your programme, examination regulations, and supervisor.
 ## License
 
 The MIT License covers the LaTeX template source.
+Keep the included `LICENSE` when redistributing the template or a modified copy.
+
+The PDF metadata describes the thesis itself: its author is the student, not
+the template maintainer. Do not add the template copyright or attribution to
+the generated PDF. This repository was created as an original template rather
+than derived from another template, so there is no upstream template to name.
 
 ### Logo Notice
 
